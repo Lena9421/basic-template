@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang=ru>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="main-header">
+  </header>
+  <div class="container">
+    <div class="ui-kit-container">
+      <p class="ui-kit-container__text">
+        Пример использования стилизованного селекта (Select2):
+      </p>
+      <form action="save.php" method="POST">
+        <div class="js-select-basic">
+          <select name="" id="my-select">
+            <option value="1">one</option>
+            <option value="2">two</option>
+            <option value="3">three</option>
+            <option value="4">four</option>
+            <option value="5">five</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="ui-kit-container">
+      <p class="ui-kit-container__text">
+        Пример использования svg-спрайта:
+      </p>
+      <svg class="icon icon--previous">
+        <use xlink:href="img/icons.svg#previous">
+        </use>
+      </svg>
+    </div>
+    <div class="ui-kit-container">
+      <p class="ui-kit-container__text">
+        Пример слайдера:
+      </p>
+      <div class="swiper-container slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background: red;">
+            <div class="slider__slide-wrapper">
+              <p class="slider__text" data-swiper-parallax-x="200" data-swiper-parallax-y="100" data-swiper-parallax-duration="1300">
+                Slide 1
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slider__slide-wrapper">
+              <p class="slider__text" data-swiper-parallax="-400" data-swiper-parallax-duration="1300">
+                Slide 2
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background: red;">
+            <div class="slider__slide-wrapper">
+              <p class="slider__text" data-swiper-parallax="-400" data-swiper-parallax-duration="1300">
+                Slide 3
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+  <script src="js/svg4everybody.js "></script>
+  <script>svg4everybody();</script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/select2.full.min.js"></script>
+  <script src="js/swiper.min.js "></script>
+  <script src="js/my-js.js "></script>
+
+  <script>
+    $(document).ready(function () {
+      var mySwiper = new Swiper('.swiper-container', {
+
+        direction: 'horizontal',
+        loop: true,
+        parallax: true,
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+
+      });
+    });
+  </script>
+
+</body>
+
+</html>

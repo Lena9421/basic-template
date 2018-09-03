@@ -1,0 +1,17 @@
+/* Vendor */
+@import "vendor/normalize";
+@import "vendor/select2.min.scss";
+@import "vendor/swiper";
+
+/* Global */
+@import "global/global";
+@import "global/fonts";
+
+/* Blocks */
+@import "blocks/btn";
+@import "blocks/container";
+@import "blocks/select2-custom";
+@import "blocks/menu-slider";
+@import "blocks/ui-kit-container";
+@import "blocks/icon";
+@import "blocks/slider";
