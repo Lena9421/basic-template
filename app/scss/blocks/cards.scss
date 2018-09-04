@@ -19,6 +19,20 @@
   display: block;
   width: 100%;
   padding: 20px 15px;
+  background: #fff;
   cursor: pointer;
-  background-color: olivedrab;
+  text-align: center;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in, ease, linear;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 60px 10px rgba(224, 222, 222, 0.5);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in, ease, linear;
+  }
+}
+
+.cards__text {
+  font-family: Roboto, "Times New Roman", Times, serif;
 }
