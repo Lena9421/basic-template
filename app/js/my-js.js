@@ -1,3 +1,15 @@
+// acc
+
+$(".js-acc-btn").on("click", function(e) {
+  e.preventDefault();
+  $(this)
+    .parents(".js-acc-parent")
+    .find(".acc__body")
+    .slideToggle();
+  $(this).toggleClass("active");
+});
+
+//  select-2
 var basic_select = {
   init: function() {
     var $select = $(".js-select-basic select");
@@ -15,7 +27,7 @@ var basic_select = {
 };
 
 basic_select.init();
-
+//  swiper
 $(document).ready(function() {
   var mySwiper = new Swiper(".swiper-container", {
     direction: "horizontal",
