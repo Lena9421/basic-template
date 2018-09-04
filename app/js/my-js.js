@@ -17,37 +17,18 @@ var basic_select = {
 basic_select.init();
 
 $(document).ready(function() {
-  $(".js-example-basic-single").select2();
+  var mySwiper = new Swiper(".swiper-container", {
+    direction: "horizontal",
+    loop: true,
+    parallax: true,
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    }
+  });
 });
-
-/*Select2 Initlization*/
-
-$(".js-example-basic-single").select2();
-
-$(".js-example-basic-multiple").select2();
-
-$("#singleSelectExample").select2({
-  placeholder: "Select an option...",
-  allowClear: true
-});
-$(".js-example-placeholder-single").select2({
-  placeholder: "Select an option...",
-  allowClear: true
-});
-
-$(".js-example-placeholder-multiple").select2({
-  placeholder: "Select a option"
-});
-
-if ($(".js-menu-slider").length != 0) {
-  var nSlides = $(".js-menu-slider").find(".swiper-slide").length;
-
-  if (nSlides > 7) {
-    var menuSwipper = new Swiper(".js-menu-slider", {
-      slidesPerView: 6,
-      spaceBetween: 0,
-      nextButton: ".js-menu-slider-btn-next",
-      prevButton: ".js-menu-slider-btn-prev"
-    });
-  }
-}

@@ -1,0 +1,84 @@
+.acc {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.acc__head {
+  padding: 50px;
+  background-color: gray;
+  position: relative;
+}
+.acc__btn {
+  width: 200px;
+  outline: none;
+  background: red;
+  color: #fff;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+
+  &.active .acc__btn-text--open {
+    display: none;
+  }
+  &.active .acc__btn-text--close {
+    display: inline-block;
+  }
+}
+.acc__btn-text {
+  &--close {
+    display: none;
+  }
+}
+.acc__btn-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
+}
+.acc__btn-circle {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: 1px solid red;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: red;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: red;
+  }
+}
+
+.acc__btn-circle.active::after {
+  display: none;
+}
+
+.acc__body {
+  padding: 80px;
+  background-color: cadetblue;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

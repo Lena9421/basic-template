@@ -70,9 +70,33 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
-
     </div>
 
+    <div class="ui-kit-container">
+      <div class="acc js-acc-parent">
+        <div class="acc__head">
+          <button class="acc__btn js-acc-btn" type="button">
+            <span class="acc__btn-text acc__btn-text--open">Развернуть</span>
+            <span class="acc__btn-text acc__btn-text--close">Свернуть</span>
+          </button>
+        </div>
+        <div class="acc__body js-acc-body">
+
+        </div>
+      </div>
+    </div>
+    <div class="ui-kit-container">
+      <div class="acc js-acc-parent">
+        <div class="acc__head">
+          <div class="acc__btn-wrapper">
+            <button class="acc__btn-circle js-acc-btn" type="button"></button>
+          </div>
+        </div>
+        <div class="acc__body js-acc-body">
+
+        </div>
+      </div>
+    </div>
   </div>
   </div>
   <script src="js/svg4everybody.js "></script>
@@ -83,23 +107,10 @@
   <script src="js/my-js.js "></script>
 
   <script>
-    $(document).ready(function () {
-      var mySwiper = new Swiper('.swiper-container', {
-
-        direction: 'horizontal',
-        loop: true,
-        parallax: true,
-
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        }
-
-      });
+    $('.js-acc-btn').on('click', function (e) {
+      e.preventDefault();
+      $(this).parents('.js-acc-parent').find('.acc__body').slideToggle();
+      $(this).toggleClass('active');
     });
   </script>
 
