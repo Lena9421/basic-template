@@ -1,24 +1,30 @@
-# Local files
-/psd/
-/log/
-/tmp/
-*_local.*
+### NPM / BOWER components
+node_modules/*
+bower_components/*
 
-# File system caches
-.DS_Store
-._*
+### Sass template
+.sass-cache
+*.css.map
+
+### Project folders
+
+libs/*
+build/*
+Perfect Pixel/*
+temp/*
+
+
+### Project files
+*.zip
+*.rar
+*.psd
+*.sketch
+
+### Directory-based project format:
+.idea/
+*.swp
+*~
+*.iws
 *.log
-
-# IDE system files
-.ropeproject
-.vim
-.idea
-.tags
-.env
-.env3
-*.sublime-workspace
-*.sublime-project
-
-
-/node_modules/
-/build/
+.project
+.DS_Store

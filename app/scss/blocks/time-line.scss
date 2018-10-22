@@ -1,0 +1,61 @@
+.timeline {
+  position: relative;
+  background-color: grey;
+  width: 100%;
+  height: 2px;
+  margin: 200px 50px;
+}
+
+.time-line__wrapper {
+  width: 100%;
+  height: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.time-line__step {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border: 2px solid lightgray;
+  border-radius: 50%;
+  position: relative;
+
+  &--success {
+    border: 1px solid #3e7f3e;
+    background: #3e7f3e;
+  }
+  &--in-process {
+    border: 1px solid orange;
+    background: orange;
+  }
+}
+.time-line__step-line {
+  height: 2px;
+  background: lightgrey;
+  margin: 0 5px;
+  flex-grow: 1;
+
+  &--success {
+    background: #3e7f3e;
+  }
+
+  &--in-process {
+    background: orange;
+  }
+}
+.time-line__steps-counts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--center {
+    justify-content: space-around;
+
+    & .time-line__steps-count:last-child {
+      display: none;
+    }
+  }
+}
